@@ -8,9 +8,9 @@ using System.Text;
 
 namespace WcfServiceCalculator
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IServiceCalc" in both code and config file together.
     [ServiceContract]
-    public interface IService1
+    public interface IServiceCalc
     {
 
         [OperationContract]
@@ -19,7 +19,18 @@ namespace WcfServiceCalculator
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        double Add(double a, double b);
+
+        [OperationContract]
+        double Subtract(double a, double b);
+
+        [OperationContract]
+        double Multiply(double a, double b);
+
+        [OperationContract]
+        double Divide(double a, double b);
+
     }
 
 
